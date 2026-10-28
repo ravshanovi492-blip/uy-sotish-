@@ -1,0 +1,519 @@
+/* RESET & UMUMIY SOZLAMALAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* BUTUN SAYTNIG ASOSIY TERN/DARK-GRADIENT ORQA FONI */
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    background-attachment: fixed;
+    color: #f1f5f9;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVBAR SHAFFAF OYNA STILI */
+.navbar {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* HERO BO'LIMI VA ASOSIY FONI */
+.hero {
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.85)), 
+                url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&auto=format&fit=crop') center/cover no-repeat fixed;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 19px;
+    max-width: 780px;
+    margin: 0 auto 30px auto;
+    color: #cbd5e1;
+}
+
+/* TUGMALAR STILI */
+.btn {
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #0284c7, #2563eb);
+    color: white;
+    box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(2, 132, 199, 0.6);
+}
+
+.btn-outline {
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
+    background: rgba(255, 255, 255, 0.05);
+    margin-left: 12px;
+}
+
+.btn-outline:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    transform: translateY(-3px);
+}
+
+/* STATISTIKA FONI */
+.stats {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 45px 0;
+    border-y: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.stat-card i {
+    font-size: 30px;
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.stat-card h3 {
+    font-size: 38px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.stat-card p {
+    color: #94a3b8;
+}
+
+/* SECTION TITLE */
+.section-title {
+    text-align: center;
+    margin: 60px 0 40px 0;
+}
+
+.section-title h2 {
+    font-size: 34px;
+    color: #ffffff;
+}
+
+.section-title p {
+    color: #94a3b8;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* FILTR TUGMALARI */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 22px;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    background: rgba(30, 41, 59, 0.8);
+    color: #38bdf8;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: #0284c7;
+    color: white;
+    border-color: #0284c7;
+}
+
+/* UYLAR GRID KARTALARI */
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.property-card {
+    background: rgba(30, 41, 59, 0.7);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(56, 189, 248, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-img {
+    position: relative;
+    height: 230px;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* BADGELAR */
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 20px;
+    color: white;
+}
+.badge-sale { background: #0284c7; }
+.badge-hot { background: #ef4444; }
+.badge-vip { background: #f59e0b; }
+
+.card-body {
+    padding: 22px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 800;
+    color: #38bdf8;
+    margin-bottom: 6px;
+}
+
+.old-price {
+    font-size: 16px;
+    color: #64748b;
+    text-decoration: line-through;
+    margin-left: 8px;
+    font-weight: 400;
+}
+
+.card-body h3 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.location {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #cbd5e1;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+    margin-bottom: 18px;
+}
+
+.btn-card {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-card:hover {
+    background: #0284c7;
+    border-color: #0284c7;
+}
+
+/* PORTFOLIO FONI */
+.portfolio-section {
+    background: rgba(15, 23, 42, 0.6);
+    padding: 60px 0;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.portfolio-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 250px;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-info {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.95), transparent);
+    color: white;
+    width: 100%;
+    padding: 20px 15px;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    padding: 80px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.about-text h2 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.about-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.about-list li {
+    margin-bottom: 12px;
+    color: #cbd5e1;
+}
+
+.about-list i {
+    color: #38bdf8;
+    margin-right: 10px;
+}
+
+/* CONTACT BO'LIMI */
+.contact-section {
+    padding: 70px 0;
+    background: rgba(30, 41, 59, 0.4);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.info-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.info-item i {
+    font-size: 22px;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.1);
+    padding: 15px;
+    border-radius: 50%;
+    height: fit-content;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(30, 41, 59, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    outline: none;
+    background: rgba(15, 23, 42, 0.6);
+    color: white;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #38bdf8;
+}
+
+/* FOOTER */
+footer {
+    background: #090d16;
+    text-align: center;
+    padding: 25px 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* MODAL OYNA */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(6px);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-content img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #94a3b8;
+}
+
+.close-modal:hover {
+    color: white;
+}
+
+.modal-action {
+    margin-top: 20px;
+}
+
+/* MOBIL EKRANLAR UCHUN MOSLASHUVCHANLIK */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px; left: 0; width: 100%;
+        background: #0f172a;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+}
